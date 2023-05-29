@@ -25,8 +25,8 @@ class ImageShow(Node) :
         x_max = shape[1]
         y_max = shape[0]
         
-        cv2.line(cv_image, pt1=(int(x_max / 2), 0), pt2=(int(x_max / 2), y_max), color=(255,255,255), thickness=1, lineType=cv2.LINE_4)
-        cv2.line(cv_image, pt1=(0, int(y_max / 2)), pt2=(x_max, int(y_max / 2)), color=(255,255,255), thickness=1, lineType=cv2.LINE_4)
+        cv2.line(cv_image, pt1=(int(x_max / 2), 0), pt2=(int(x_max / 2), y_max), color=(0,255,0), thickness=1, lineType=cv2.LINE_4)
+        cv2.line(cv_image, pt1=(0, int(y_max / 2)), pt2=(x_max, int(y_max / 2)), color=(0,255,0), thickness=1, lineType=cv2.LINE_4)
         
         try:
             self.image_pub.publish(self.bridge.cv2_to_imgmsg(cv_image, 'bgr8'))
